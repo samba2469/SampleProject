@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>-->
+    <script src="scripts/angular.js"></script>
+    <!--<script src="scripts/angular.min.js"></script>-->
+    <script src="App.js"></script>
+   
+    <style>
+        .content {
+            max-width: 700px;
+            margin: 5%;
+            background: url(/Images/Backgrounds-image.jpg)no-repeat#808080;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body ng-controller="Registrationctrl">
+    <div>
+
+
+        <form class="form-horizontal ">
+
+            <div class="container">
+
+                <div class="content">
+                    <!--<div class="row">
+                        <div class="jumbotron">
+                            <h2>Close Panel With Button</h2>
+                            <p>You can use jQuery Effects to close away you Panel using the data-effect and name it how you want to.</p>
+                        </div>
+                    </div>-->
+                    <h2 style="text-align:center">Registration Form</h2>
+                    <div class="well well-sm" style="border:groove">
+                        <div class="form-group  ">
+                            <label class="control-label col-sm-2" for="Name">Full Name:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="Name" placeholder="Enter Full Name" ng-model="Reg_fullname" >
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+
+                        </div>
+                        <div class="form-group  ">
+                            <label class="control-label col-sm-2" for="Email">Email:</label>
+                            <div class="col-sm-4">
+                                <!--<input type="text" class="form-control" id="Email" placeholder="Enter Email" ng-change="UniqueEmail()" ng-model="Reg_Email"   >-->
+                                <input type="text" class="form-control" id="Email" placeholder="Enter Full Name"  ng-model="Reg_Email" ng-change="chech_Email(); remote-Validation" >
+                                 <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                                <label style="color:red" ng-bind="emailspan"></label>
+                            </div>
+                        </div>
+                        <div class="form-group  ">
+                            <label class="control-label col-sm-2" for="phoneNo">phoneNo:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="phoneNo" placeholder="Enter phoneNo" ng-model="Reg_phoneNo" ng-change="check_phno();">
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                                <label style="color:red" ng-bind="phonespan"></label>
+                            </div>
+                        </div>
+                        <div class="form-group  ">
+                            <label class="control-label col-sm-2" for="Username">UserName:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="Username" placeholder="Enter UserName" ng-model="Reg_UserName" >
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+                        <div class="form-group  ">
+                            <label class="control-label col-sm-2" for="Password">Password:</label>
+                            <div class="col-sm-4">
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" ng-model="Reg_password" >
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group  ">
+                            <label class="control-label col-sm-2" for="Radio">Gender:</label>
+                            <div class="col-sm-4">
+                                <label>Male</label>
+                                <input type="radio" name="gender" ng-value='"Male"' id="Radio1" ng-model="Reg_gender" >
+                                <label>Female</label>
+                                <input type="radio" name="gender"  ng-value='"Female"'id="Radio2" ng-model="Reg_gender">
+                            </div>
+                        </div>
+                        <div class="form-group  ">
+                            <label class="control-label col-sm-2"></label>
+                            <div class="col-sm-2">
+                                <input type="submit"  value="submit" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-click="Insertuser();" id="btnsubmit">
+                                <!--<input type="submit"  value="save" class="btn btn-primary"  id="btnsubmit">-->
+                                <!--<button ng-click="insertdata();">save</button>-->
+                               
+                              <!--  <input type="submit" class="btn btn-primary" ng-click="insertdata();" id="btnsubmit">-->
+                                <a style="float:right" role="button" href="Home.html">Go To LoginPage</a>
+                                <label id="msg" ng-model="msg"></label>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button ng-controller="Registrationctrl" ng-click="delete();">sss</button>
+    </div>
+
+</body>
+</html>

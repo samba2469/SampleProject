@@ -1,0 +1,122 @@
+﻿
+<html ng-app="myapp">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+                        
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="../scripts/angular.min.js"></script>
+    <script src="../App.js"></script>
+
+    <!--<img src="../Images/Backgrounds-image.jpg" />-->
+    <style>
+        .content {
+            max-width: 500px;
+            margin: 5%;
+            background: url(/Images/Backgrounds-image.jpg)no-repeat#808080;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body ng-app="myapp" ng-controller="Registrationctrl">
+    <!--<form class="needs-validation" novalidate>
+          <div class="form-group" >
+              <div class="col-sm-3">
+                  <label for="uname">Username:</label>
+                  <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                  <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+          </div>
+    </form>-->
+    <!--<section class="login-block" >-->
+    <form class="form-horizontal ">
+        <div class="container">
+            <div class="content">
+                <!-- <a href="../Views/Registration.html">../Views/Registration.html</a>-->
+
+                <h2 style="text-align:center">Login</h2>
+                <div class="well well-sm" style="border:groove">
+
+                    <div class="form-group">
+
+                        <label class="control-label col-sm-2" for="uname">Username:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="uname" placeholder="Enter username" ng-model="uname" name="uname" >
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="pwd">Password:</label>
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password"  ng-model="pwd" name="pwd" >
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                    </div>
+
+
+                  
+                    <div class="form-group  " ng-controller="Registrationctrl">
+                        <label class="control-label col-sm-2"></label>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal"   ng-click="login();" >Submit</button>
+                            <!-- <a style="float:right" href="/Registration.html">Go To Registration</a>-->
+                         <!--   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
+
+                        </div>
+                        <div >
+                            <a class="col-sm-4 " style="float:none" href="/Registration.html">Go To Registration</a>
+                        </div>
+                    </div >
+                    <!--<div class="form-group" >-->
+                        <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+                        <!--<a class="col-sm-4" style="float:right" href="/Registration.html">Go To Registration</a>
+                    </div>-->
+                    <label style="color:red" ng-model="msg">{{msg}}</label>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="container" id="div1" ng-controller="Registrationctrl">
+        <!--<h2>Modal Example</h2>-->
+        <!-- Trigger the modal with a button -->
+        <!-- Modal -->
+        <div class="modal fade" model="showModal"  id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p style="color:red">You Login failed.</p>
+                        <h2 style="color:red">First you Register</h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default"  data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+   
+</body>
+</html>
